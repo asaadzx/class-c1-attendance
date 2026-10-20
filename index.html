@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class C1 Attendance | حضور وغياب فصل C1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1 data-i18n="title">Class C1 Attendance</h1>
+      <p class="sub" data-i18n="subtitle">Egypt-Japan KOSEN Institute — First Year</p>
+    </div>
+    <div class="toolbar">
+      <span id="dateLabel" class="date-label"></span>
+      <button id="langBtn" class="btn ghost" type="button">عربي</button>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="stat present"><span class="num" id="presentCount">0</span><span data-i18n="present">Present</span></div>
+    <div class="stat absent"><span class="num" id="absentCount">0</span><span data-i18n="absent">Absent</span></div>
+    <div class="stat total"><span class="num" id="totalCount">0</span><span data-i18n="total">Total</span></div>
+  </section>
+
+  <section class="actions">
+    <button id="allBtn" class="btn" type="button" data-i18n="markAll">Check all</button>
+    <button id="noneBtn" class="btn" type="button" data-i18n="clearAll">Uncheck all</button>
+    <button id="resetBtn" class="btn warn" type="button" data-i18n="reset">Reset</button>
+    <span class="spacer"></span>
+    <button id="excelBtn" class="btn primary" type="button" data-i18n="exportExcel">Export Excel</button>
+    <button id="pngBtn" class="btn primary" type="button" data-i18n="downloadPng">Download Image</button>
+    <button id="pdfBtn" class="btn primary" type="button" data-i18n="printPdf">Print / PDF</button>
+  </section>
+
+  <main id="roster" class="roster" aria-label="Student checklist"></main>
+
+  <footer class="foot">
+    <span data-i18n="hint">Unchecked names are counted as absent.</span>
+  </footer>
+
+  <div id="printArea" class="print-area" aria-hidden="true"></div>
+
+  <script src="lib/xlsx.bundle.js"></script>
+  <script src="students.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
